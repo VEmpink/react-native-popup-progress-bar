@@ -11,15 +11,15 @@ For `react-native v0.60+` no need to run command `$ react-native link react-nati
 ## Usage
 
 ```js
-import PopupProgressBar from "react-native-popup-progress-bar";
+import PopupProgressBar from 'react-native-popup-progress-bar';
 
 /**
  * Default options
  */
 const options = {
-  theme: "defaultDeviceLight",
-  title: "title",
-  message: "message",
+  theme: 'defaultDeviceLight',
+  title: 'title',
+  message: 'message',
   isSpinner: true,
   isIndeterminate: false,
   maxProgress: 100,
@@ -27,7 +27,7 @@ const options = {
 };
 
 function handdleDismiss() {
-  console.log("Popup Progress is dismissed :(");
+  console.log('Popup Progress is dismissed :(');
 }
 
 /**

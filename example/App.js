@@ -8,22 +8,12 @@ export default function App(props) {
       <TouchableHighlight
         underlayColor="red"
         onPress={() => {
-          PopupProgressBar.show(
-            {
-              theme: 3,
-              title: 'Loading...',
-              message: 'Please wait...',
-              isSpinner: false,
-              isIndeterminate: false,
-              maxProgress: 100,
-              isCancelable: true,
-            },
-            () => {
-              console.log('dissmised');
-            },
-          );
+          PopupProgressBar.show({
+            title: 'Please wait...',
+            message: 'Do not close the App!',
+          });
         }}>
-        <Text>HelloWorld</Text>
+        <Text>Press Me!</Text>
       </TouchableHighlight>
     </View>
   );
