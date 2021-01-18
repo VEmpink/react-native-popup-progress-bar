@@ -4,6 +4,7 @@
   "version": "1.0.5",
   "description": "Android ProgressDialog for React Native",
   "main": "index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
