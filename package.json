@@ -1,7 +1,7 @@
 {
   "name": "react-native-popup-progress-bar",
   "title": "React Native Popup Progress Bar",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Android ProgressDialog for React Native",
   "main": "index.js",
   "types": "./types/index.d.ts",
