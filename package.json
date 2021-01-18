@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Android ProgressDialog for React Native",
   "main": "index.js",
-  "types": "index.d.ts",
+  "types": "./types/index.d.ts",
   "files": [
     "README.md",
     "android",
