@@ -1,18 +1,16 @@
 {
   "name": "react-native-popup-progress-bar",
   "title": "React Native Popup Progress Bar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Android ProgressDialog for React Native",
   "main": "index.js",
-  "types": "./types/index.d.ts",
   "files": [
     "README.md",
     "android",
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
