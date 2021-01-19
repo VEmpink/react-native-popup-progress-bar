@@ -31,18 +31,23 @@ const ProgressDialog = {
       switch (theme) {
         case 'classic':
           THEME_TYPE = 1;
+          break;
 
         case 'holoDark':
           THEME_TYPE = 2;
+          break;
 
         case 'holoLight':
           THEME_TYPE = 3;
+          break;
 
         case 'defaultDeviceDark':
           THEME_TYPE = 4;
+          break;
 
         case 'defaultDeviceLight':
           THEME_TYPE = 5;
+          break;
       }
 
       if (typeof title === 'string') TITLE = title;
