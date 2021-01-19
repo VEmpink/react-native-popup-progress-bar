@@ -1,12 +1,18 @@
 # react-native-popup-progress-bar
 
-Android native progress dialog (modal progress, or popup progress bar) for React Native
+Android progress dialog, modal progress, or popup progress bar for React Native.
+
+Based on [Android ProgressDialog](https://developer.android.com/reference/android/app/ProgressDialog).
 
 ## Getting started
 
-`$ npm install react-native-popup-progress-bar --save`
+`$ yarn add react-native-popup-progress-bar`
 
-For `react-native v0.60+` no need to run command `$ react-native link react-native-popup-progress-bar`
+Or
+
+`$ npm i react-native-popup-progress-bar`
+
+In `react-native v0.60+` no need to run command `$ react-native link react-native-popup-progress-bar`
 
 ## Usage
 
@@ -18,54 +24,54 @@ import PopupProgressBar from 'react-native-popup-progress-bar';
  */
 const options = {
   theme: 'defaultDeviceLight',
-  title: 'title',
-  message: 'message',
   isSpinner: true,
   isIndeterminate: false,
   maxProgress: 100,
   isCancelable: true,
+  onDismiss: () {}
 };
 
-function handdleDismiss() {
-  console.log('Popup Progress is dismissed :(');
-}
-
-/**
- * Without options
- */
-PopupProgressBar.show();
-
-/**
- * Only callback
- */
-PopupProgressBar.show(handleDissmiss);
-
-/**
- * With options
- */
 PopupProgressBar.show(options);
-
-/**
- * With options and a callback
- */
-PopupProgressBar.show(options, handleDissmiss);
 ```
 
-## Options
+## Options (optional)
 
-- **`theme`** (optional) - A native theme from Android `ProgressDialog`, values: `"defaultDeviceLight"` (default), `"defaultDeviceDark"`, `"holoLight"`, `"holoDark"`, `"classic"`.
+- **`theme`** - A native theme from Android `ProgressDialog`.
+  | Type | Required | Value |
+  | --- | --- | --- |
+  | `string` | No, default: `"holoLight"` | `"classic"`, `"holoDark"`, `"holoLight"`, `"defaultDeviceDark"`, `"defaultDeviceLight"` |
 
-- **`title`** (optional) - Popup progress title, type: `string`.
+- **`title`** - Title of Progress Dialog.
+  | Type | Required |
+  | --- | --- |
+  | `string` | No, default: `undefined` |
 
-- **`message`** (optional) - Popup progress message, type: `string`.
+- **`message`** - Message of Progress Dialog.
+  | Type | Required |
+  | --- | --- |
+  | `string` | No, default: `undefined` |
 
-- **`isSpinner`** (optional) - Set the progress bar style in spinner style or horizontal style, type: `boolean`.
+- **`isSpinner`** - Set the progress bar style in spinner style or horizontal style.
+  | Type | Required |
+  | --- | --- |
+  | `boolean` | No, default: `true` |
 
-- **`isIndeterminate`** (optional) - Enable/Disable the indeterminate mode for the progress. In indeterminate mode, the progress is ignored and the dialog shows an infinite animation instead. **NOTE:** This property only effected if **`isSpinner`** is `false`, type: `boolean`.
+- **`isIndeterminate`** - Enable/Disable the indeterminate mode for the progress. In indeterminate mode, the progress is ignored and the dialog shows an infinite animation instead.
+  **NOTE:** This property only effected if **`isSpinner`** is `false`.
+  | Type | Required |
+  | --- | --- |
+  | `boolean` | No, default: `false` |
 
-- **`maxProgress`** (optional) - Sets the maximum allowed progress value. **NOTE:** This property only effected if **`isSpinner`** is `false`, type: `number`.
+- **`maxProgress`** - Sets the maximum allowed progress value.
+  **NOTE:** This property only effected if **`isSpinner`** is `false`.
+  | Type | Required |
+  | --- | --- |
+  | `number` | No, default: `100` |
 
-- **`isCancelable`** (optional) - Whether the dialog should be canceled when touched outside of the view progress.
+- **`isCancelable`** - Whether the dialog should be canceled when touched outside of the view progress.
+  | Type | Required |
+  | --- | --- |
+  | `boolean` | No, default: `true` |
 
 ## Methods
 
@@ -77,4 +83,4 @@ PopupProgressBar.show(options, handleDissmiss);
 
 - **`.setMessage(string)`** - Set message of the progress. This is useful when you need displaying progress but only for the message.
 
-- **`.dismiss()`** - Hide/Dismiss the progress.
+- **`.dismiss()`** - Hide/Dismiss the Progress Dialog.

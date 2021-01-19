@@ -5,7 +5,7 @@ const {PopupProgressBar} = NativeModules;
 const ProgressDialog = {
   show: function (options) {
     /**
-     * "defaultDeviceLight"
+     * "holoLight"
      */
     let THEME_TYPE = 3,
       TITLE,
